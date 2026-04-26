@@ -4,11 +4,13 @@ use std::path::PathBuf;
 
 /**
  * A named group of `Task`s.
+ * `depends`: A vector to the names of jobs which must run before self.
  */
 pub struct Job
 {
     name: String,
     tasks: Vec<Task>,
+    depends: Option<Vec<String>>,
 }
 
 /**
