@@ -1,6 +1,4 @@
-mod io;
-
-use std::path::PathBuf;
+pub mod io;
 
 /**
  * A named group of `Task`s.
@@ -20,6 +18,6 @@ pub struct Job
  */
 struct Task
 {
-    runner: PathBuf,
+    runner: std::path::PathBuf,
     args: Vec<String>,
 }
